@@ -1,0 +1,118 @@
+District-wise Food Consumption Analysis in Haryana (NSSO 68)
+Overview
+
+This assignment analyzes household food consumption patterns in Haryana using data from the NSSO 68th Round. The objective is to explore how food consumption varies across districts and to visualize these differences using statistical summaries, bar charts, and geospatial choropleth maps.
+
+The analysis is implemented in both R and Python to demonstrate cross-language analytical skills and reproducibility.
+
+Objectives
+
+Filter NSSO household survey data for the state of Haryana
+
+Explore the distribution of food consumption expenditure
+
+Compute average food consumption by district
+
+Visualize district-level differences using:
+
+Histograms
+
+Bar plots
+
+Choropleth maps
+
+Dataset
+
+NSSO 68th Round Household Consumption Survey
+
+Key variable used:
+
+foodtotal_v – total food consumption expenditure (₹)
+
+Additional identifiers:
+
+State code (state_1)
+
+District code / name
+
+Methodology
+Step 1: Data Loading
+
+Imported NSSO survey data
+
+Loaded Haryana district boundary GeoJSON for spatial analysis
+
+Step 2: Data Filtering
+
+Filtered observations where state_1 == "HR" (Haryana)
+
+Converted district identifiers to categorical/factor types where required
+
+Step 3: Exploratory Analysis
+
+Plotted histograms to examine the distribution of food consumption
+
+Identified skewness and variability in household expenditure
+
+Step 4: District-level Aggregation
+
+Grouped data by district
+
+Calculated average food consumption expenditure per district
+
+Mapped district codes to district names for readability
+
+Step 5: Visualization
+
+Bar plots comparing average food consumption across districts
+
+Choropleth maps showing spatial variation in food consumption:
+
+Darker shades indicate higher average expenditure
+
+District labels added for clarity
+
+Tools & Technologies
+R
+
+dplyr – data manipulation
+
+ggplot2 – visualization
+
+sf – spatial data handling
+
+Python
+
+pandas – data manipulation
+
+matplotlib, seaborn – visualization
+
+geopandas – spatial analysis
+
+Key Insights
+
+Food consumption expenditure varies significantly across Haryana districts
+
+Urbanized districts tend to show higher average food spending
+
+Spatial visualization helps identify regional consumption inequality
+
+Combining survey data with geographic boundaries enhances interpretability
+
+Project Structure
+├── data/
+│   ├── NSSO68.csv
+│   └── Haryana.geojson
+├── R/
+│   └── haryana_food_consumption_analysis.R
+├── Python/
+│   └── haryana_food_consumption_analysis.py
+└── README.md
+
+Notes
+
+File paths in the code should be updated to match your local system
+
+District names in the GeoJSON must align with the NSSO district naming convention
+
+This project is part of academic coursework and demonstrates applied data analysis and visualization techniques
